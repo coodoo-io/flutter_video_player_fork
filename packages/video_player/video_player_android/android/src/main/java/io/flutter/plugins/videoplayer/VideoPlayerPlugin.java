@@ -223,6 +223,11 @@ public class VideoPlayerPlugin implements FlutterPlugin, AndroidVideoPlayerApi {
     options.mixWithOthers = mixWithOthers;
   }
 
+  @Override
+  public boolean isAndroid10(@NonNull Boolean mixWithOthers) {
+    return android.os.Build.VERSION.SDK_INT == android.os.Build.VERSION_CODES.Q;
+  }
+
   private interface KeyForAssetFn {
     String get(String asset);
   }
