@@ -225,6 +225,8 @@ public class VideoPlayerPlugin implements FlutterPlugin, AndroidVideoPlayerApi {
 
   @Override
   public Boolean isAndroid10() {
+    Log.wtf(TAG, android.os.Build.VERSION.SDK_INT + "");
+    Log.wtf(TAG, android.os.Build.VERSION_CODES.Q + "");
     return android.os.Build.VERSION.SDK_INT == android.os.Build.VERSION_CODES.Q;
   }
 
