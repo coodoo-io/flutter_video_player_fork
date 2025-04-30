@@ -38,9 +38,9 @@ class AndroidVideoPlayer extends VideoPlayerPlatform {
   }
 
   @override
-  Future<int?> create(DataSource dataSource) {
+  Future<int?> create(DataSource dataSource) async {
     VideoViewType videoViewType = VideoViewType.textureView;
-    if (_api.isAndroid10()) {
+    if (await _api.isAndroid10()) {
       // Android 10 seems to only supports platform view.
       // Issue: https://github.com/flutter/flutter/issues/166481
       videoViewType = VideoViewType.platformView;
