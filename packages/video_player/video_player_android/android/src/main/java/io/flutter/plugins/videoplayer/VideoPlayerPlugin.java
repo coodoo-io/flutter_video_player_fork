@@ -224,7 +224,7 @@ public class VideoPlayerPlugin implements FlutterPlugin, AndroidVideoPlayerApi {
   }
 
   @Override
-  public boolean isAndroid10(@NonNull Boolean mixWithOthers) {
+  public Boolean isAndroid10() {
     return android.os.Build.VERSION.SDK_INT == android.os.Build.VERSION_CODES.Q;
   }
 
